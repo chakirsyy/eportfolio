@@ -1,0 +1,179 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 90px;
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  flex: 1;
+}
+
+/* ---- Colonne principale ---- */
+.hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  animation: heroIn 0.9s var(--ease-out) both;
+}
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.hero__role {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 1.6em;
+  flex-wrap: wrap;
+}
+.hero__prompt { color: var(--acc-cyan); }
+.hero__type { color: var(--text-soft); }
+
+.hero__lead {
+  color: var(--text-soft);
+  max-width: 54ch;
+  font-size: 1.05rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--text-mute);
+  margin-top: 0.5rem;
+}
+.hero__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--acc);
+  box-shadow: 0 0 0 0 var(--acc-glow-strong);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--acc-glow-strong); }
+  70% { box-shadow: 0 0 0 9px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* ---- Carte identité ---- */
+.hero__card {
+  background: linear-gradient(160deg, var(--bg-700), var(--bg-850));
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--line);
+  animation: heroIn 0.9s 0.15s var(--ease-out) both;
+  position: relative;
+}
+.hero__card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius);
+  padding: 1px;
+  background: linear-gradient(160deg, var(--line-acc), transparent 40%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.hero__card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  font-size: 0.78rem;
+  color: var(--text-mute);
+}
+.hero__card-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+.hero__card-dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--bg-600);
+}
+.hero__card-dots i:first-child { background: #ff5f57; opacity: 0.7; }
+.hero__card-dots i:nth-child(2) { background: #febc2e; opacity: 0.7; }
+.hero__card-dots i:nth-child(3) { background: var(--acc); opacity: 0.8; }
+
+.hero__card-body {
+  padding: 1.4rem 1.3rem;
+  font-size: 0.84rem;
+  line-height: 2;
+  color: var(--text-soft);
+}
+.hero__card-body .k { color: var(--acc-cyan); }
+.hero__card-body .s { color: var(--acc); }
+.hero__card-body .b { color: #ff9d5c; }
+
+/* ---- Marquee ---- */
+.hero__marquee {
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding-block: 1rem;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.hero__marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.hero__marquee-group {
+  display: flex;
+}
+.hero__marquee-item {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--text-mute);
+  padding-inline: 1.4rem;
+  white-space: nowrap;
+}
+.hero__marquee-item em {
+  color: var(--acc);
+  font-style: normal;
+  margin-left: 1.4rem;
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 880px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__card { order: -1; max-width: 420px; }
+}

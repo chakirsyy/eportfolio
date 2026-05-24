@@ -1,0 +1,99 @@
+.comp__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.3rem;
+  margin-bottom: 4rem;
+}
+
+.comp-card {
+  position: relative;
+  padding: 2rem 1.8rem 1.8rem;
+  background: linear-gradient(155deg, var(--bg-700), var(--bg-850));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.4s var(--ease), transform 0.4s var(--ease),
+    opacity 0.7s var(--ease-out);
+}
+.comp-card:hover {
+  border-color: var(--line-acc);
+  transform: translateY(-3px);
+}
+.comp-card__id {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: var(--bg-600);
+  line-height: 1;
+  opacity: 0.5;
+  transition: color 0.4s var(--ease);
+}
+.comp-card:hover .comp-card__id { color: var(--acc-glow-strong); }
+
+.comp-card__title {
+  font-size: 1.3rem;
+  max-width: 80%;
+  margin-bottom: 0.8rem;
+  line-height: 1.15;
+}
+.comp-card__desc {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  margin-bottom: 1.3rem;
+}
+.comp-card__tools {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/* ---- Stack ---- */
+.stack {
+  border-top: 1px solid var(--line);
+  padding-top: 2.5rem;
+}
+.stack__title {
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  color: var(--text-mute);
+  margin-bottom: 1.8rem;
+}
+.stack__cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+.stack__col span.stack__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--acc);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line-acc);
+}
+.stack__col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.stack__col li {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  transition: color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.stack__col li:hover { color: var(--text); transform: translateX(3px); }
+
+@media (max-width: 760px) {
+  .comp__grid { grid-template-columns: 1fr; }
+  .stack__cols { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+}
+@media (max-width: 440px) {
+  .stack__cols { grid-template-columns: 1fr; }
+  .comp-card__title { max-width: 100%; }
+}

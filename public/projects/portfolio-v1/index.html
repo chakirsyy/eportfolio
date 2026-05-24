@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portfolio — BUT Science des Données</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+		<header class="site-header">
+			<div class="hero">
+				<img class="hero__banner" src="img/4719_fullimage_20210309-image-dataanalytics-magnifieroverview-high-3000x1987.jpg" alt="Data & Analytics">
+				<div class="hero__overlay">
+					<div class="brand">
+						<div class="brand__text">
+							<p class="brand__kicker">BUT Science des Données — 2e année</p>
+							<h1 class="brand__title">Sayyouri CHAKIR</h1>
+							<p class="brand__subtitle">Alternant chez Médiamétrie </p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<nav class="nav">
+				<ul>
+					<li><a href="#profil">Profil</a></li>
+					<li><a href="#competences">Compétences</a></li>
+					<li><a href="#experiences">Expériences</a></li>
+					<li><a href="#loisirs">Loisirs</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="container">
+			<section id="profil" class="card">
+				<h2>Profil</h2>
+				<p>
+					Je suis étudiant en <strong>BUT Science des Données (2e année)</strong> à l'IUT Rives de Seine.
+					Je m'intéresse à la donnée : collecte, nettoyage, analyse et visualisation.
+				</p>
+				<ul class="list">
+					<li><strong>Ville :</strong> Argenteuil </li>
+					<li><strong>Email :</strong> <a class="link" href="mailto:chakirsyy@outlook.fr">chakirsyy@outlook.fr</a></li>
+					<li><strong>LinkedIn :</strong> <a class="link" href="https://www.linkedin.com/in/chakir-sayyouri-5307701a9/" target="_blank">Chakir SAYYOURI</a></li>
+                    <li><strong>GitHub :</strong> <a class="link" href="https://github.com/chakirsyy" target="_blank">chakirsyy</a></li>
+
+				</ul>
+			</section>
+
+			<section id="competences" class="card">
+				<h2>Compétences</h2>
+				<p>Une sélection de compétences vues en cours et en projets :</p>
+				<div class="skills">
+					<div class="skill">
+						<h3>Statistiques</h3>
+						<p class="muted">[ex : statistiques descriptives, tests, statistiques inférentielles]</p>
+						<div class="bar"><span style="width: 50%"></span></div>
+					</div>
+					<div class="skill">
+						<h3>Programmation</h3>
+						<p class="muted">[ex : Python, SQL, HTML/CSS, R]</p>
+						<div class="bar"><span style="width: 80%"></span></div>
+					</div>
+					<div class="skill">
+						<h3>Visualisation</h3>
+						<p class="muted">[ex : dataviz, PowerBI]</p>
+						<div class="bar"><span style="width: 90%"></span></div>
+					</div>
+				</div>
+			</section>
+
+			<section id="experiences" class="card">
+				<h2>Expériences</h2>
+				<div class="timeline">
+					<div class="timeline__item">
+						<h3>2025-2027 - Médiamétrie</h3>
+						<p><strong>Rôle :</strong> Alternant en exploitation de données</p>
+						<ul class="list">
+							<li>Mission : récolter des données TV internationales et les implémenter dans des bases de données.</li>
+							<li>Outils : SQL, Python, PowerBI et outils internes</li>
+							<li>Résultat : Gain en autonomie et en efficacité d'apprentissage.</li>
+						</ul>
+					</div>
+
+					<div class="timeline__item">
+						<h3>2026 — Freelance développeur pour un institut de beauté</h3>
+						<p><strong>Rôle :</strong> Développeur web front/back</p>
+						<ul class="list">
+							<li>Mission : recueil des besoins clients et développement de solutions web.</li>
+							<li>Outils : React, Node.js</li>
+							<li>Résultat : Projet livré dans les délais avec une qualité satisfaisante.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section id="loisirs" class="card">
+				<h2>Loisirs</h2>
+				<p>
+					Je pratique aussi de nombreux loisirs en dehors de mes études, qui me permettent de me détendre et de développer d'autres compétences :
+				</p>
+				<ul class="list">
+					<li>Musique : je fais de la chanson, je suis signé depuis 2 ans en maison de disque</li>
+					<li>Voyage : j'aime partir à la conquête de nouveaux horizons et découvrir de nouvelles cultures</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<p>© <span id="year">2026</span> — Portfolio (BUT Science des Données)</p>
+		</footer>
+
+		<script>
+			document.getElementById('year').textContent = new Date().getFullYear();
+		</script>
+	</body>
+</html>
