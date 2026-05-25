@@ -259,6 +259,20 @@ export const projects: Project[] = [
       'Mise en place d’un processus ETL complet : extraction du jeu de données officiel (fr-esr-parcoursup.xlsx), transformation et nettoyage sous Power Query, puis chargement et restitution dans Power BI. Analyse du profil des candidats (bac, mention) et des disparités d’accès par filière, statut et région.',
     tools: ['Excel', 'Power Query', 'Power BI'],
     competences: ['C1', 'C3'],
+    featured: true,
+    reflective: {
+      proof: 'Support de présentation : schéma du processus ETL et tableaux de bord Power BI (profil des candidats, analyse par région).',
+      objectives:
+        'À partir des données ouvertes de Parcoursup, comprendre quels facteurs expliquent le mieux les taux d’accès dans le supérieur et savoir si le profil du candidat (type de bac, mention) pèse sur ses chances — afin d’aider les candidats à faire des choix réalistes et d’éclairer l’adaptation de l’offre de formation.',
+      approach:
+        'Avec mon groupe, j’ai construit un processus ETL de bout en bout : extraction du jeu officiel fr-esr-parcoursup.xlsx, transformation et nettoyage sous Power Query (retypage, valeurs manquantes, harmonisation des libellés), puis modélisation et visualisation dans Power BI. L’analyse a été structurée en axes — profil des candidats, filière, statut et région — chacun appuyé par des visuels dédiés.',
+      difficulties:
+        'Fiabiliser un jeu de données Parcoursup volumineux et brut sous Power Query ; choisir les axes et les visualisations qui répondent vraiment à la problématique sans noyer le lecteur ; et coordonner un travail à plusieurs en répartissant les parties tout en gardant une analyse cohérente.',
+      results:
+        'Un tableau de bord Power BI mettant en évidence les disparités d’accès selon la filière, le statut et la région, ainsi que l’influence du profil du candidat (bac, mention) — débouchant sur des préconisations pour des choix d’orientation plus réalistes et des pistes d’approfondissement.',
+      learning:
+        'Cette SAÉ m’a fait pratiquer l’intégration de données de bout en bout (ETL sous Power Query, C1) et leur restitution visuelle et argumentée (Power BI, C3). J’y ai aussi gagné en méthode : structurer une analyse, choisir les bons visuels et travailler en équipe avec une vraie organisation du temps.',
+    },
     assets: [
       { label: 'Présentation du projet (PDF)', url: '/projects/integration-donnees.pdf', type: 'pdf' },
     ],
