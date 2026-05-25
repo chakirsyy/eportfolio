@@ -25,7 +25,7 @@ export default function Projects() {
           <p className="kicker">// réalisations</p>
           <h2>Mes projets &amp; analyses.</h2>
           <p className="lead">
-            Six réalisations issues du BUT et du monde professionnel. Clique sur une carte
+            Sept réalisations issues du BUT et du monde professionnel. Clique sur une carte
             marquée <span className="acc">analyse</span> pour lire l’étude détaillée :
             contexte, objectifs, démarche, difficultés et résultats.
           </p>
