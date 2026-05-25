@@ -5,9 +5,7 @@
    ========================================================================= */
 
 /* ---- Fonts (Google Fonts importées dans index.html) ---- */
-/* Display  : "Space Grotesk" -> remplacée par "Sora" pour éviter le cliché AI */
-/* Body     : "Inter Tight" léger */
-/* Mono     : "JetBrains Mono" (vibe terminal/data) */
+/* Display : "Sora" · Body : "Inter Tight" · Mono : "JetBrains Mono" */
 
 :root {
   /* --- Palette : fond sombre --- */

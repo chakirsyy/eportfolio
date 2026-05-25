@@ -12,13 +12,11 @@ export const profile = {
   phone: '+33 6 50 86 23 51',
   linkedin: 'https://www.linkedin.com/in/chakir-sayyouri-5307701a9/',
   github: 'https://github.com/chakirsyy',
-  // Place ton CV PDF dans /public et indique le nom de fichier ici :
   cvFr: '/cv/Chakir_Sayyouri_FR.pdf',
   cvEn: '/cv/Chakir_Sayyouri_EN.pdf',
   status: 'Étudiant en alternance · Data Operator chez Médiamétrie',
 }
 
-/* Petit pitch d'accueil (1-2 lignes, ton assertif) */
 export const intro =
   "\u00c9tudiant en 2e ann\u00e9e de BUT Science des Donn\u00e9es (parcours VCOD) \u00e0 l\u2019IUT Paris Rives de Seine, " +
   "en alternance chez M\u00e9diam\u00e9trie. Je m\u2019int\u00e9resse \u00e0 l\u2019analyse, au traitement et \u00e0 la valorisation " +
@@ -156,15 +154,7 @@ export const stack = {
   tools: ['Git', 'Office 365'],
 }
 
-/* =========================================================================
-   RÉALISATIONS :
-     • 4 SAÉ académiques BUT2 (year: 'BUT2')
-       → audit RGPD, intégration de données, étude économique, portfolio web
-     • 1 SAÉ BUT1            (year: 'BUT1') → reporting BDD loueur de DVD
-     • 2 projets pro          (year: 'PRO') → freelance centre de beauté,
-                                              dashboard Power BI (alternance)
-   « featured: true » => analyse réflexive détaillée (cartes cliquables).
-   ========================================================================= */
+/* ---- Réalisations (les cartes « featured » ouvrent une analyse réflexive) ---- */
 export type Project = {
   id: string
   title: string
@@ -175,7 +165,6 @@ export type Project = {
   tools: string[]
   competences: string[] // ids: C1..C4
   featured?: boolean
-  // Analyse réflexive (pour les projets featured) :
   reflective?: {
     proof: string
     objectives: string
@@ -184,15 +173,10 @@ export type Project = {
     results: string
     learning: string
   }
-  // Preuves à voir / télécharger (PDF, images, etc.). Déposer les fichiers dans public/projects/
   assets?: { label: string; url: string; type: 'pdf' | 'image' | 'link' | 'code' }[]
-  todo?: boolean // true = emplacement à compléter par tes vraies infos
 }
 
 export const projects: Project[] = [
-  /* ===== PROJET PERSO / FREELANCE — app centre de beauté =====
-     Volontairement factuel : pas de lien avec le BUT ni le référentiel.
-     L'expérience détaillée est mise en avant dans la timeline (Parcours). */
   {
     id: 'centre-beaute',
     title: 'Plateforme de gestion · Centre de beauté',
@@ -209,11 +193,10 @@ export const projects: Project[] = [
     ],
   },
 
-  /* ===== Projet d'entreprise — réalisé pendant l'alternance (période BUT2) ===== */
   {
     id: 'powerbi-mediametrie',
     title: 'Dashboard de suivi de projet · Power BI',
-    year: 'PRO',
+    year: 'BUT2',
     yearLabel: 'Alternance Médiamétrie · BUT2 · 2026',
     context:
       'Projet d’entreprise mené pendant mon alternance chez Médiamétrie : un tableau de bord de suivi pour l’implémentation des métadonnées TV.',
@@ -236,7 +219,6 @@ export const projects: Project[] = [
         'Une vraie mise en pratique professionnelle du cycle de la donnée — extraction SQL, modélisation, mesures DAX et restitution décisionnelle — dans un contexte d’équipe et de production.',
     },
   },
-  /* ===== BUT2 — SAÉ académiques (4) ===== */
   {
     id: 'audit-rgpd',
     title: 'Audit de conformité RGPD · Projet de contrôle horaire',
@@ -327,7 +309,6 @@ export const projects: Project[] = [
     ],
   },
 
-  /* ===== BUT1 — 1 maximum ===== */
   {
     id: 'reporting-dvd',
     title: 'Reporting & analyse de données · Loueur de DVD',

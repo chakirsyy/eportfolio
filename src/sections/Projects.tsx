@@ -82,7 +82,6 @@ function ProjectCard({
       <div className="pcard__head">
         <span className={`pcard__year pcard__year--${project.year}`}>{project.yearLabel}</span>
         {project.featured && <span className="pcard__star mono">★ analyse</span>}
-        {project.todo && <span className="pcard__todo mono">à compléter</span>}
       </div>
 
       <h3 className="pcard__title">{project.title}</h3>
@@ -161,13 +160,6 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
             })}
           </div>
         </div>
-
-        {project.todo && (
-          <p className="modal__warn mono">
-            ⚠ Cette analyse contient des emplacements « À COMPLÉTER » : remplace-les par tes
-            vraies infos avant la soutenance.
-          </p>
-        )}
 
         {r && (
           <div className="modal__sections">

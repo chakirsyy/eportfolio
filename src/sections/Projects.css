@@ -95,15 +95,6 @@
   color: var(--acc);
   letter-spacing: 0.05em;
 }
-.pcard__todo {
-  font-size: 0.64rem;
-  color: #ff9d5c;
-  border: 1px dashed rgba(255, 157, 92, 0.4);
-  padding: 0.15em 0.5em;
-  border-radius: 5px;
-  margin-left: auto;
-}
-
 .pcard__title {
   font-size: 1.25rem;
   line-height: 1.15;
@@ -240,16 +231,6 @@
   font-family: var(--font-mono);
   color: var(--acc);
   margin-right: 0.4rem;
-}
-
-.modal__warn {
-  font-size: 0.78rem;
-  color: #ff9d5c;
-  background: rgba(255, 157, 92, 0.08);
-  border: 1px solid rgba(255, 157, 92, 0.25);
-  padding: 0.8rem 1rem;
-  border-radius: var(--radius-sm);
-  margin-bottom: 1.6rem;
 }
 
 .modal__sections {
